@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(180deg, #e8f5e9 0%, #ffffff 15%);
+    position: relative;
+    min-height: 100vh;
+}
+
+.sheep-decoration {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0.3;
+    font-size: 2rem;
+}
+
+.sheep {
+    animation: float 3s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 0.2s);
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+header {
+    background: linear-gradient(135deg, #a5d6a7 0%, #81c784 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(129, 199, 132, 0.3);
+}
+
+.profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.header-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.95;
+    font-weight: 300;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    color: #66bb6a;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #c8e6c9;
+    position: relative;
+}
+
+section p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+strong {
+    color: #4caf50;
+    font-weight: 600;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.skill-item {
+    background: linear-gradient(135deg, #f1f8e9 0%, #ffffff 100%);
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid #66bb6a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-item::before {
+    content: '🐑';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    opacity: 0.1;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(102, 187, 106, 0.3);
+    border-left-width: 6px;
+}
+
+.skill-item:hover::before {
+    opacity: 0.2;
+    transform: rotate(15deg);
+}
+
+.skill-item h3 {
+    color: #333;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.skill-item p {
+    color: #666;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline-item {
+    background: linear-gradient(135deg, #f1f8e9 0%, #ffffff 100%);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    border-left: 4px solid #66bb6a;
+}
+
+.timeline-item h3 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.timeline-date {
+    color: #4caf50;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.hobby-item {
+    background: linear-gradient(135deg, #f1f8e9 0%, #ffffff 100%);
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid #66bb6a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.hobby-item::before {
+    content: '🐑';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    opacity: 0.1;
+}
+
+.hobby-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(102, 187, 106, 0.3);
+    border-left-width: 6px;
+}
+
+.hobby-item:hover::before {
+    opacity: 0.2;
+    transform: rotate(15deg);
+}
+
+.hobby-item h3 {
+    color: #333;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.hobby-item p {
+    color: #666;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.contact {
+    text-align: center;
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    padding: 40px;
+    border-radius: 15px;
+    border: 3px dashed #81c784;
+    position: relative;
+}
+
+.contact::before {
+    content: '🐑 🌱 🐑 🌱 🐑';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    padding: 0 20px;
+    font-size: 1.2rem;
+}
+
+.contact-btn {
+    background: linear-gradient(135deg, #66bb6a 0%, #4caf50 100%);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 15px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(102, 187, 106, 0.3);
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102, 187, 106, 0.5);
+}
+
+.contact-btn:active {
+    transform: translateY(0);
+}
+
+footer {
+    background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+}
+
+footer p {
+    margin: 0;
+    color: white;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .sheep-decoration {
+        top: 10px;
+        right: 10px;
+        font-size: 1.5rem;
+    }
+
+    .profile-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-content h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 30px 15px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hobbies-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact::before {
+        font-size: 0.9rem;
+    }
+}
